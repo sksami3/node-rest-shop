@@ -17,8 +17,13 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+    const productObj = {
+        productId: req.body. Id,
+        productName: req.body. Name
+    };
     res.status(200).json({
-        message:"in post"
+        message:"inserted",
+        product: productObj
     });
 });
 
